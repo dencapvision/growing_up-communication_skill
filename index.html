@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-Learning Slides | CAP-Vision Institute</title>
+    <style>
+        @font-face {
+            font-family: 'TBold';
+            src: url('./TBold.ttf') format('truetype');
+            font-weight: bold;
+        }
+        @font-face {
+            font-family: 'TMedium';
+            src: url('./TMedium.ttf') format('truetype');
+        }
+
+        :root {
+            --ink: #243a4d;
+            --teal: #15A89B;
+            --blue: #2FA3DE;
+            --gold: #FFC53D;
+            --coral: #FF6F61;
+            --cream: #FFF6E6;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'TMedium', sans-serif;
+            background: radial-gradient(circle at top right, #f0f8ff, #ffffff);
+            color: var(--ink);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            text-align: center;
+        }
+
+        .container {
+            max-width: 900px;
+            padding: 40px 20px;
+        }
+
+        h1 {
+            font-family: 'TBold', sans-serif;
+            font-size: 3.5rem;
+            margin-bottom: 10px;
+            background: linear-gradient(90deg, var(--teal), var(--blue));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        p.subtitle {
+            font-size: 1.5rem;
+            opacity: 0.7;
+            margin-bottom: 50px;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+        }
+
+        @media (max-width: 600px) {
+            .grid { grid-template-columns: 1fr; }
+        }
+
+        .card {
+            background: #fff;
+            padding: 40px;
+            border-radius: 24px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+            text-decoration: none;
+            color: inherit;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            border: 2px solid transparent;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 50px rgba(0,0,0,0.1);
+        }
+
+        .card.growing { border-color: var(--teal); }
+        .card.signal { border-color: var(--blue); }
+
+        .icon {
+            font-size: 4rem;
+            margin-bottom: 20px;
+        }
+
+        h2 {
+            font-family: 'TBold', sans-serif;
+            font-size: 1.8rem;
+            margin: 10px 0;
+        }
+
+        .tag {
+            font-size: 0.9rem;
+            background: #f0f0f0;
+            padding: 5px 15px;
+            border-radius: 999px;
+            margin-top: 15px;
+            color: #666;
+        }
+
+        footer {
+            margin-top: 60px;
+            font-size: 1rem;
+            opacity: 0.5;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>E-Learning Portal</h1>
+        <p class="subtitle">เลือกหลักสูตรที่ต้องการเข้าชม</p>
+
+        <div class="grid">
+            <a href="./Growing Up - The Game of Life.dc.html" class="card growing">
+                <div class="icon">🎮</div>
+                <h2>GROWING UP</h2>
+                <div style="color: var(--teal);">The Game of Life</div>
+                <div class="tag">Chapter 1-3 Included</div>
+            </a>
+
+            <a href="./Communication Skill - THE SIGNAL.dc.html" class="card signal">
+                <div class="icon">📡</div>
+                <h2>THE SIGNAL</h2>
+                <div style="color: var(--blue);">Communication Skill</div>
+                <div class="tag">Module 1-3 Included</div>
+            </a>
+        </div>
+
+        <footer>
+            CAP-Vision Institute &copy; 2026
+        </footer>
+    </div>
+</body>
+</html>
