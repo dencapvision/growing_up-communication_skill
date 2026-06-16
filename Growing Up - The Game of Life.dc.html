@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+  @font-face{font-family:'TBold';src:url('./TBold.ttf') format('truetype');font-weight:400 900;font-display:swap;}
+  @font-face{font-family:'TMedium';src:url('./TMedium.ttf') format('truetype');font-weight:400 700;font-display:swap;}
+  :root{
+    --ink:#243a4d; --ink-soft:#5d7283; --line:#e7dcc4;
+    --cream:#FFF6E6; --paper:#FFFCF4;
+    --gold:#FFC53D; --coral:#FF6F61; --teal:#15A89B; --green:#46C28A; --purple:#8A6BE6; --orange:#FF9838; --blue:#2FA3DE;
+    --t-hero:128px; --t-title:74px; --t-lead:54px; --t-sub:44px; --t-body:36px; --t-small:28px; --t-eye:25px;
+  }
+  *{box-sizing:border-box;}
+  body{margin:0;background:#0e1b24;font-family:'TMedium','Noto Sans Thai',sans-serif;}
+  .slide-base { display:flex; flex-direction:column; justify-content:center; padding:90px 130px; width:1920px; height:1080px; background:var(--cream); color:var(--ink); overflow:hidden; }
+  .slide-hero { display:flex; flex-direction:column; justify-content:center; align-items:center; text-align:center; background:linear-gradient(165deg,#5BC8EE 0%,#3FA0E4 52%,#7E83EF 100%); color:#fff; }
+  .slide-dark { background:var(--ink); color:#fff; }
+  .cam-slot { position:absolute; right:46px; bottom:42px; width:440px; height:258px; border-radius:24px; background:linear-gradient(160deg,#33536a,#1e3442); border:5px solid #ffffff; box-shadow:0 16px 38px rgba(20,40,55,.30); display:flex; align-items:center; justify-content:center; z-index:10; }
+  .cam-label { position:absolute; top:13px; left:13px; display:flex; align-items:center; gap:7px; background:#FFC53D; color:#243a4d; font-family:'TBold',sans-serif; font-size:21px; padding:7px 15px 8px; border-radius:999px; }
+  .cam-placeholder { display:flex; flex-direction:column; align-items:center; gap:10px; color:rgba(255,255,255,.5); font-size:22px; }
+  h1 { font-family:'TBold',sans-serif; font-size:var(--t-hero); margin:0; line-height:1; }
+  h2 { font-family:'TBold',sans-serif; font-size:var(--t-title); margin:0; line-height:1.1; }
+  .eyebrow { font-family:'TBold',sans-serif; font-size:var(--t-eye); letter-spacing:5px; margin-bottom:20px; }
+</style>
+</helmet>
+<x-import component-from-global-scope="deck-stage" from="./deck-stage.js" width="1920" height="1080" hint-size="100%,100%">
+
+<!-- OPENING EPISODE -->
+<section class="slide-base slide-hero">
+  <div class="eyebrow">GROWING UP</div>
+  <h1>THE GAME OF LIFE</h1>
+  <div style="font-size:64px; color:var(--gold);">ภารกิจเติบโตของพวกเรา</div>
+  <div class="cam-slot"><div class="cam-label">★ คุณครู</div><div class="cam-placeholder">พื้นที่วิดีโอผู้สอน</div></div>
+</section>
+
+<!-- CHAPTER 1: THE MAP -->
+<section class="slide-base slide-hero" style="background:var(--teal);">
+  <div class="eyebrow">CHAPTER 1</div>
+  <h1>THE MAP</h1>
+  <div style="font-size:64px;">แผนที่ที่ไม่มีใครบอก</div>
+  <div class="cam-slot"><div class="cam-label">★ คุณครู</div><div class="cam-placeholder">พื้นที่วิดีโอผู้สอน</div></div>
+</section>
+<section class="slide-base slide-hero" style="background:linear-gradient(135deg,#46C28A,#15A89B);">
+  <div style="font-size:120px;">🗺️</div>
+  <div class="eyebrow">ITEM UNLOCKED</div>
+  <h1>SELF DISCOVERY MAP</h1>
+  <div class="cam-slot"><div class="cam-label">★ คุณครู</div><div class="cam-placeholder">พื้นที่วิดีโอผู้สอน</div></div>
+</section>
+
+<!-- CHAPTER 2: THE MONSTER -->
+<section class="slide-base slide-hero" style="background:var(--coral);">
+  <div class="eyebrow">CHAPTER 2</div>
+  <h1>THE MONSTER</h1>
+  <div style="font-size:64px;">สัตว์ประหลาดในใจ</div>
+  <div class="cam-slot"><div class="cam-label">★ คุณครู</div><div class="cam-placeholder">พื้นที่วิดีโอผู้สอน</div></div>
+</section>
+<section class="slide-base slide-hero" style="background:linear-gradient(135deg,#FF6F61,#e65b50);">
+  <div style="font-size:120px;">📡</div>
+  <div class="eyebrow">ITEM UNLOCKED</div>
+  <h1>EMOTION RADAR</h1>
+  <div class="cam-slot"><div class="cam-label">★ คุณครู</div><div class="cam-placeholder">พื้นที่วิดีโอผู้สอน</div></div>
+</section>
+
+<!-- CHAPTER 3: THE ALLIES -->
+<section class="slide-base slide-hero" style="background:var(--blue);">
+  <div class="eyebrow">CHAPTER 3</div>
+  <h1>THE ALLIES</h1>
+  <div style="font-size:64px;">เพื่อนร่วมทีม</div>
+  <div class="cam-slot"><div class="cam-label">★ คุณครู</div><div class="cam-placeholder">พื้นที่วิดีโอผู้สอน</div></div>
+</section>
+<section class="slide-base">
+  <div class="eyebrow" style="color:var(--blue);">I-MESSAGE</div>
+  <div style="display:flex; flex-direction:column; gap:20px; align-items:center; margin-top:40px;">
+    <div style="background:#fff; padding:20px; border-radius:999px; border:3px solid var(--blue); width:500px; text-align:center; font-size:36px;">❤️ ฉันรู้สึก...</div>
+    <div style="background:#fff; padding:20px; border-radius:999px; border:3px solid var(--blue); width:500px; text-align:center; font-size:36px;">📍 เมื่อ...</div>
+    <div style="background:#fff; padding:20px; border-radius:999px; border:3px solid var(--blue); width:500px; text-align:center; font-size:36px;">🌱 เพราะ...</div>
+  </div>
+  <div class="cam-slot"><div class="cam-label">★ คุณครู</div><div class="cam-placeholder">พื้นที่วิดีโอผู้สอน</div></div>
+</section>
+<section class="slide-base slide-hero" style="background:linear-gradient(135deg,#2FA3DE,#1589be);">
+  <div style="font-size:120px;">📜</div>
+  <div class="eyebrow">ITEM UNLOCKED</div>
+  <h1>I-MESSAGE SCROLL</h1>
+  <div class="cam-slot"><div class="cam-label">★ คุณครู</div><div class="cam-placeholder">พื้นที่วิดีโอผู้สอน</div></div>
+</section>
+<section class="slide-base slide-hero" style="background:linear-gradient(160deg,#2FA3DE,#243a4d);">
+  <div class="eyebrow">CHAPTER 3 COMPLETE</div>
+  <h1 style="color:var(--gold);">TEAM BUILDER!</h1>
+  <div class="cam-slot"><div class="cam-label">★ คุณครู</div><div class="cam-placeholder">พื้นที่วิดีโอผู้สอน</div></div>
+</section>
+
+</x-import>
+</x-dc>
+</body>
+</html>

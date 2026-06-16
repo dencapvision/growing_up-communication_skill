@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+  @font-face{font-family:'TBold';src:url('./TBold.ttf') format('truetype');font-weight:400 900;font-display:swap;}
+  @font-face{font-family:'TMedium';src:url('./TMedium.ttf') format('truetype');font-weight:400 700;font-display:swap;}
+  :root{
+    --ink:#243a4d; --ink-soft:#5d7283; --line:#e7dcc4;
+    --cream:#FFF6E6; --paper:#FFFCF4;
+    --gold:#FFC53D; --coral:#FF6F61; --teal:#15A89B; --green:#46C28A; --purple:#8A6BE6; --orange:#FF9838; --blue:#2FA3DE;
+    --t-hero:128px; --t-title:74px; --t-lead:54px; --t-sub:44px; --t-body:36px; --t-small:28px; --t-eye:25px;
+  }
+  *{box-sizing:border-box;}
+  body{margin:0;background:#0e1b24;}
+  @keyframes floaty{0%,100%{transform:translateY(0)}50%{transform:translateY(-18px)}}
+  @keyframes floaty2{0%,100%{transform:translateY(0)}50%{transform:translateY(14px)}}
+  @keyframes twinkle{0%,100%{opacity:.25;transform:scale(.7)}50%{opacity:1;transform:scale(1.1)}}
+  @keyframes drift{0%,100%{transform:translateX(0)}50%{transform:translateX(16px)}}
+  
+  .video-slot {
+    position:absolute;right:46px;bottom:42px;width:440px;height:258px;border-radius:24px;
+    background:linear-gradient(160deg,#33536a,#1e3442);border:5px solid #ffffff;
+    box-shadow:0 16px 38px rgba(20,40,55,.30),0 0 0 3px rgba(255,197,61,.5);
+    overflow:hidden;display:flex;align-items:center;justify-content:center;z-index:10;
+  }
+  .video-label {
+    position:absolute;top:13px;left:13px;display:flex;align-items:center;gap:7px;
+    background:#FFC53D;color:#243a4d;font-family:'TBold','Noto Sans Thai',sans-serif;
+    font-size:21px;line-height:1;padding:7px 15px 8px;border-radius:999px;
+  }
+  .video-placeholder {
+    display:flex;flex-direction:column;align-items:center;gap:10px;color:rgba(255,255,255,.5);
+    font-family:'TMedium','Noto Sans Thai',sans-serif;font-size:22px;
+  }
+</style>
+</helmet>
+
+<x-import component-from-global-scope="deck-stage" from="./deck-stage.js" width="1920" height="1080" hint-size="100%,100%">
+
+<!-- SLIDE 1: Title -->
+<section data-label="Title" data-screen-label="01" style="display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;padding:90px 120px;background:linear-gradient(165deg,#5BC8EE 0%,#3FA0E4 52%,#7E83EF 100%);color:#fff;overflow:hidden;font-family:'TMedium','Noto Sans Thai',sans-serif;">
+  <div style="font-family:'TBold','Noto Sans Thai',sans-serif;font-size:25px;letter-spacing:7px;color:rgba(255,255,255,.9);background:rgba(255,255,255,.16);padding:12px 28px;border-radius:999px;border:1.5px solid rgba(255,255,255,.4);">CHAPTER 1 : THE MAP</div>
+  <h1 style="font-family:'TBold','Noto Sans Thai',sans-serif;font-size:120px;line-height:1;margin:34px 0 0;letter-spacing:2px;white-space:nowrap;text-shadow:0 10px 30px rgba(20,50,80,.28);">THE MAP</h1>
+  <div style="font-family:'TBold','Noto Sans Thai',sans-serif;font-size:58px;margin-top:14px;color:#fff;opacity:.96;">แผนที่ที่ไม่มีใครบอก</div>
+  <div style="display:flex;align-items:center;gap:14px;margin-top:40px;font-family:'TMedium','Noto Sans Thai',sans-serif;font-size:40px;color:#fff;background:rgba(36,58,77,.22);padding:14px 34px;border-radius:999px;">
+    ✨ Welcome Player ภารกิจแรกกำลังเริ่มต้น
+  </div>
+  <div class="video-slot"><div class="video-label">★ คุณครู</div><div class="video-placeholder"><svg width="46" height="46" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"><rect x="2" y="6" width="14" height="12" rx="3"/><path d="M16 10l6-3v10l-6-3z"/></svg>พื้นที่วิดีโอผู้สอน</div></div>
+</section>
+
+<!-- SLIDE 2: Questions -->
+<section data-label="คำถาม" data-screen-label="02" style="display:flex;flex-direction:column;justify-content:center;padding:90px 130px;background:radial-gradient(circle at 1px 1px, rgba(36,58,77,.05) 1.6px, transparent 1.7px) 0 0/42px 42px, #FFF6E6;color:#243a4d;overflow:hidden;font-family:'TMedium','Noto Sans Thai',sans-serif;">
+  <h2 style="font-family:'TBold','Noto Sans Thai',sans-serif;font-size:72px;line-height:1.1;margin:0 0 40px;">ก่อนเริ่มเกม...<br>พวกเรามีคำถามไหม?</h2>
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:20px;max-width:1100px;">
+    <div style="background:#fff;border:3px solid #ffe0c2;border-radius:24px;padding:30px;display:flex;align-items:center;gap:20px;">
+      <div style="width:20px;height:20px;border-radius:50%;background:var(--coral);"></div>
+      <div style="font-size:36px;font-family:'TBold',sans-serif;">โตไปจะเป็นอะไร</div>
+    </div>
+    <div style="background:#fff;border:3px solid #cdeede;border-radius:24px;padding:30px;display:flex;align-items:center;gap:20px;">
+      <div style="width:20px;height:20px;border-radius:50%;background:var(--teal);"></div>
+      <div style="font-size:36px;font-family:'TBold',sans-serif;">เรียนไปเพื่ออะไร</div>
+    </div>
+    <div style="background:#fff;border:3px solid #ddd2f7;border-radius:24px;padding:30px;display:flex;align-items:center;gap:20px;">
+      <div style="width:20px;height:20px;border-radius:50%;background:var(--purple);"></div>
+      <div style="font-size:36px;font-family:'TBold',sans-serif;">จริงๆ แล้วเราชอบอะไร</div>
+    </div>
+    <div style="background:#fff;border:3px solid #ffe9b8;border-radius:24px;padding:30px;display:flex;align-items:center;gap:20px;">
+      <div style="width:20px;height:20px;border-radius:50%;background:var(--orange);"></div>
+      <div style="font-size:36px;font-family:'TBold',sans-serif;">ทำไมบางวันเหมือนหลงทาง</div>
+    </div>
+  </div>
+  <div class="video-slot"><div class="video-label">★ คุณครู</div><div class="video-placeholder"><svg width="46" height="46" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"><rect x="2" y="6" width="14" height="12" rx="3"/><path d="M16 10l6-3v10l-6-3z"/></svg>พื้นที่วิดีโอผู้สอน</div></div>
+</section>
+
+<!-- SLIDE 3: Unusual thing -->
+<section data-label="เรื่องแปลก" data-screen-label="03" style="display:flex;flex-direction:column;justify-content:center;padding:90px 130px;background:radial-gradient(circle at 1px 1px, rgba(36,58,77,.05) 1.6px, transparent 1.7px) 0 0/42px 42px, #FFF6E6;color:#243a4d;overflow:hidden;font-family:'TMedium','Noto Sans Thai',sans-serif;">
+  <h2 style="font-family:'TBold','Noto Sans Thai',sans-serif;font-size:64px;line-height:1.2;margin:0 0 30px;">มีเรื่องแปลกอย่างหนึ่ง<br>เวลาเล่นเกมใหม่ พวกเราจะได้...</h2>
+  <div style="display:flex;gap:30px;margin-top:20px;">
+    <div style="flex:1;background:var(--teal);color:#fff;border-radius:24px;padding:40px;text-align:center;">
+      <div style="font-size:80px;margin-bottom:10px;">🗺</div>
+      <div style="font-family:'TBold',sans-serif;font-size:40px;">แผนที่</div>
+    </div>
+    <div style="flex:1;background:var(--coral);color:#fff;border-radius:24px;padding:40px;text-align:center;">
+      <div style="font-size:80px;margin-bottom:10px;">📖</div>
+      <div style="font-family:'TBold',sans-serif;font-size:40px;">คู่มือ</div>
+    </div>
+    <div style="flex:1;background:var(--purple);color:#fff;border-radius:24px;padding:40px;text-align:center;">
+      <div style="font-size:80px;margin-bottom:10px;">🎮</div>
+      <div style="font-family:'TBold',sans-serif;font-size:40px;">Tutorial</div>
+    </div>
+  </div>
+  <p style="font-size:48px;margin-top:40px;font-family:'TBold',sans-serif;color:var(--coral);">แต่ชีวิตจริง... ไม่มีอะไรให้เลย</p>
+  <div class="video-slot"><div class="video-label">★ คุณครู</div><div class="video-placeholder"><svg width="46" height="46" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"><rect x="2" y="6" width="14" height="12" rx="3"/><path d="M16 10l6-3v10l-6-3z"/></svg>พื้นที่วิดีโอผู้สอน</div></div>
+</section>
+
+<!-- SLIDE 4: Life is the only game -->
+<section data-label="ชีวิตคือเกม" data-screen-label="04" style="display:flex;flex-direction:column;justify-content:center;padding:90px 130px;background:#243a4d;color:#fff;overflow:hidden;font-family:'TMedium','Noto Sans Thai',sans-serif;">
+  <h2 style="font-family:'TBold','Noto Sans Thai',sans-serif;font-size:84px;line-height:1.1;margin:0 0 40px;">ชีวิตคือเกมเดียว<br>ที่ทุกคนถูกส่งเข้ามาเล่น</h2>
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:20px;max-width:1000px;">
+    <div style="background:rgba(255,255,255,.1);padding:24px 34px;border-radius:18px;font-size:36px;">❌ ไม่มี Walkthrough</div>
+    <div style="background:rgba(255,255,255,.1);padding:24px 34px;border-radius:18px;font-size:36px;">❌ ไม่มี Cheat Code</div>
+    <div style="background:rgba(255,255,255,.1);padding:24px 34px;border-radius:18px;font-size:36px;">❌ ไม่มีปุ่ม Skip</div>
+  </div>
+  <div class="video-slot"><div class="video-label">★ คุณครู</div><div class="video-placeholder"><svg width="46" height="46" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"><rect x="2" y="6" width="14" height="12" rx="3"/><path d="M16 10l6-3v10l-6-3z"/></svg>พื้นที่วิดีโอผู้สอน</div></div>
+</section>
+
+<!-- SLIDE 5: Story Time -->
+<section data-label="Story Time" data-screen-label="05" style="display:flex;flex-direction:column;justify-content:center;padding:90px 130px;background:radial-gradient(circle at 1px 1px, rgba(36,58,77,.05) 1.6px, transparent 1.7px) 0 0/42px 42px, #FFF6E6;color:#243a4d;overflow:hidden;font-family:'TMedium','Noto Sans Thai',sans-serif;">
+  <div style="font-family:'TBold',sans-serif;font-size:30px;color:var(--orange);margin-bottom:10px;">STORY TIME</div>
+  <h2 style="font-family:'TBold','Noto Sans Thai',sans-serif;font-size:60px;line-height:1.2;margin:0 0 20px;">มีเด็กคนหนึ่งเปลี่ยนความฝันมาแล้ว 7 ครั้ง</h2>
+  <div style="display:flex;flex-wrap:wrap;gap:12px;max-width:1100px;">
+    <span style="background:var(--blue);color:#fff;padding:10px 24px;border-radius:999px;font-size:30px;">หมอ</span>
+    <span style="background:var(--blue);color:#fff;padding:10px 24px;border-radius:999px;font-size:30px;">นักบิน</span>
+    <span style="background:var(--blue);color:#fff;padding:10px 24px;border-radius:999px;font-size:30px;">ยูทูบเบอร์</span>
+    <span style="background:var(--blue);color:#fff;padding:10px 24px;border-radius:999px;font-size:30px;">นักกีฬา</span>
+    <span style="background:var(--blue);color:#fff;padding:10px 24px;border-radius:999px;font-size:30px;">นักดนตรี</span>
+    <span style="background:var(--blue);color:#fff;padding:10px 24px;border-radius:999px;font-size:30px;">เจ้าของธุรกิจ</span>
+  </div>
+  <p style="font-size:44px;margin-top:30px;font-family:'TBold',sans-serif;color:var(--coral);">และสุดท้าย... เขาคิดว่าตัวเองสับสน</p>
+  <div class="video-slot"><div class="video-label">★ คุณครู</div><div class="video-placeholder"><svg width="46" height="46" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"><rect x="2" y="6" width="14" height="12" rx="3"/><path d="M16 10l6-3v10l-6-3z"/></svg>พื้นที่วิดีโอผู้สอน</div></div>
+</section>
+
+<!-- SLIDE 6: Reframe -->
+<section data-label="Reframe" data-screen-label="06" style="display:flex;flex-direction:column;justify-content:center;padding:90px 130px;background:var(--teal);color:#fff;overflow:hidden;font-family:'TMedium','Noto Sans Thai',sans-serif;">
+  <h2 style="font-family:'TBold','Noto Sans Thai',sans-serif;font-size:84px;line-height:1.1;margin:0;">แต่จริงๆ เขาไม่ได้สับสน...</h2>
+  <h2 style="font-family:'TBold','Noto Sans Thai',sans-serif;font-size:96px;line-height:1.1;margin:20px 0 0;color:var(--gold);">เขากำลังสำรวจแผนที่</h2>
+  <p style="font-size:44px;margin-top:40px;opacity:.9;">การเปลี่ยนใจไม่ใช่ความผิด แต่เป็นข้อมูล</p>
+  <div class="video-slot"><div class="video-label">★ คุณครู</div><div class="video-placeholder"><svg width="46" height="46" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"><rect x="2" y="6" width="14" height="12" rx="3"/><path d="M16 10l6-3v10l-6-3z"/></svg>พื้นที่วิดีโอผู้สอน</div></div>
+</section>
+
+<!-- SLIDE 7: Mission 1 -->
+<section data-label="Mission 1" data-screen-label="07" style="display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;padding:90px 120px;background:#FFFDF6;color:#243a4d;overflow:hidden;font-family:'TMedium','Noto Sans Thai',sans-serif;">
+  <div style="font-family:'TBold',sans-serif;font-size:34px;color:var(--coral);margin-bottom:10px;">MISSION #1</div>
+  <h2 style="font-family:'TBold','Noto Sans Thai',sans-serif;font-size:84px;line-height:1.1;margin:0 0 30px;">พวกเราคิดว่า "การรู้จักตัวเอง" คืออะไร?</h2>
+  <div style="background:var(--gold);padding:14px 40px;border-radius:999px;font-family:'TBold',sans-serif;font-size:34px;margin-bottom:40px;">(หยุดคลิป 30 วินาที เขียนคำตอบ)</div>
+  <div class="video-slot"><div class="video-label">★ คุณครู</div><div class="video-placeholder"><svg width="46" height="46" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"><rect x="2" y="6" width="14" height="12" rx="3"/><path d="M16 10l6-3v10l-6-3z"/></svg>พื้นที่วิดีโอผู้สอน</div></div>
+</section>
+
+<!-- SLIDE 8: Statement -->
+<section data-label="ความจริง" data-screen-label="08" style="display:flex;flex-direction:column;justify-content:center;padding:90px 130px;background:radial-gradient(circle at 1px 1px, rgba(36,58,77,.05) 1.6px, transparent 1.7px) 0 0/42px 42px, #FFF6E6;color:#243a4d;overflow:hidden;font-family:'TMedium','Noto Sans Thai',sans-serif;">
+  <h2 style="font-family:'TBold','Noto Sans Thai',sans-serif;font-size:72px;line-height:1.2;margin:0 0 20px;">หลายคนคิดว่าต้องหาคำตอบให้เจอ</h2>
+  <div style="width:200px;height:8px;background:var(--coral);margin-bottom:30px;"></div>
+  <h2 style="font-family:'TBold','Noto Sans Thai',sans-serif;font-size:84px;line-height:1.1;margin:0;color:var(--coral);">แต่ความจริง... ไม่มีใครรู้จักตัวเองจากการนั่งคิดอย่างเดียว</h2>
+  <div class="video-slot"><div class="video-label">★ คุณครู</div><div class="video-placeholder"><svg width="46" height="46" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"><rect x="2" y="6" width="14" height="12" rx="3"/><path d="M16 10l6-3v10l-6-3z"/></svg>พื้นที่วิดีโอผู้สอน</div></div>
+</section>
+
+<!-- SLIDE 9: How to know yourself -->
+<section data-label="วิธีรู้จักตัวเอง" data-screen-label="09" style="display:flex;flex-direction:column;justify-content:center;padding:90px 130px;background:var(--teal);color:#fff;overflow:hidden;font-family:'TMedium','Noto Sans Thai',sans-serif;">
+  <h2 style="font-family:'TBold','Noto Sans Thai',sans-serif;font-size:72px;margin:0 0 40px;">พวกเรารู้จักตัวเองจาก...</h2>
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:24px;">
+    <div style="background:rgba(255,255,255,.2);padding:30px;border-radius:24px;font-size:44px;font-family:'TBold',sans-serif;">✨ การใช้ชีวิต</div>
+    <div style="background:rgba(255,255,255,.2);padding:30px;border-radius:24px;font-size:44px;font-family:'TBold',sans-serif;">✨ การลอง</div>
+    <div style="background:rgba(255,255,255,.2);padding:30px;border-radius:24px;font-size:44px;font-family:'TBold',sans-serif;">✨ การผิดพลาด</div>
+    <div style="background:rgba(255,255,255,.2);padding:30px;border-radius:24px;font-size:44px;font-family:'TBold',sans-serif;">✨ การสังเกต</div>
+  </div>
+  <div class="video-slot"><div class="video-label">★ คุณครู</div><div class="video-placeholder"><svg width="46" height="46" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"><rect x="2" y="6" width="14" height="12" rx="3"/><path d="M16 10l6-3v10l-6-3z"/></svg>พื้นที่วิดีโอผู้สอน</div></div>
+</section>
+
+<!-- SLIDE 10: Game Rule 1 -->
+<section data-label="Game Rule 1" data-screen-label="10" style="display:flex;flex-direction:column;justify-content:center;padding:90px 130px;background:radial-gradient(circle at 1px 1px, rgba(36,58,77,.05) 1.6px, transparent 1.7px) 0 0/42px 42px, #FFF6E6;color:#243a4d;overflow:hidden;font-family:'TMedium','Noto Sans Thai',sans-serif;">
+  <div style="font-family:'TBold',sans-serif;font-size:30px;color:var(--gold);margin-bottom:10px;">GAME RULE #1</div>
+  <h2 style="font-family:'TBold','Noto Sans Thai',sans-serif;font-size:84px;line-height:1.1;margin:0 0 30px;">ทุกอย่างคือข้อมูล</h2>
+  <div style="display:flex;flex-wrap:wrap;gap:14px;max-width:1100px;">
+    <span style="border:3px solid var(--teal);padding:10px 24px;border-radius:999px;font-size:36px;font-family:'TBold',sans-serif;color:var(--teal);">สิ่งที่ชอบ</span>
+    <span style="border:3px solid var(--teal);padding:10px 24px;border-radius:999px;font-size:36px;font-family:'TBold',sans-serif;color:var(--teal);">สิ่งที่ไม่ชอบ</span>
+    <span style="border:3px solid var(--teal);padding:10px 24px;border-radius:999px;font-size:36px;font-family:'TBold',sans-serif;color:var(--teal);">สิ่งที่กลัว</span>
+    <span style="border:3px solid var(--teal);padding:10px 24px;border-radius:999px;font-size:36px;font-family:'TBold',sans-serif;color:var(--teal);">สิ่งที่ตื่นเต้น</span>
+    <span style="border:3px solid var(--teal);padding:10px 24px;border-radius:999px;font-size:36px;font-family:'TBold',sans-serif;color:var(--teal);">สิ่งที่อยากลอง</span>
+  </div>
+  <div style="margin-top:40px;font-size:48px;font-family:'TBold',sans-serif;color:var(--orange);">ล้วนเป็น Item 🎒</div>
+  <div class="video-slot"><div class="video-label">★ คุณครู</div><div class="video-placeholder"><svg width="46" height="46" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"><rect x="2" y="6" width="14" height="12" rx="3"/><path d="M16 10l6-3v10l-6-3z"/></svg>พื้นที่วิดีโอผู้สอน</div></div>
+</section>
+
+<!-- SLIDE 11: Item Collection -->
+<section data-label="Item Collection" data-screen-label="11" style="display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;padding:90px 120px;background:linear-gradient(135deg,#FFC53D,#FF9838);color:#243a4d;overflow:hidden;font-family:'TMedium','Noto Sans Thai',sans-serif;">
+  <div style="font-size:120px;margin-bottom:20px;">🎒</div>
+  <div style="font-family:'TBold',sans-serif;font-size:40px;letter-spacing:4px;margin-bottom:10px;">ITEM COLLECTION</div>
+  <h2 style="font-family:'TBold','Noto Sans Thai',sans-serif;font-size:72px;line-height:1.2;margin:0;">เริ่มเก็บ Item ชิ้นแรก ชื่อว่า...</h2>
+  <div style="background:#fff;padding:20px 60px;border-radius:999px;font-family:'TBold',sans-serif;font-size:64px;margin-top:30px;box-shadow:0 14px 30px rgba(0,0,0,.15);">"ร่องรอยของตัวตน"</div>
+  <div class="video-slot"><div class="video-label">★ คุณครู</div><div class="video-placeholder"><svg width="46" height="46" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"><rect x="2" y="6" width="14" height="12" rx="3"/><path d="M16 10l6-3v10l-6-3z"/></svg>พื้นที่วิดีโอผู้สอน</div></div>
+</section>
+
+<!-- SLIDE 12: Mission 2 -->
+<section data-label="Mission 2" data-screen-label="12" style="display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;padding:90px 120px;background:#FFFDF6;color:#243a4d;overflow:hidden;font-family:'TMedium','Noto Sans Thai',sans-serif;">
+  <div style="font-family:'TBold',sans-serif;font-size:34px;color:var(--coral);margin-bottom:10px;">MISSION #2</div>
+  <h2 style="font-family:'TBold','Noto Sans Thai',sans-serif;font-size:84px;line-height:1.1;margin:0 0 30px;">จด 3 สิ่งที่พวกเราชอบ</h2>
+  <div style="background:var(--blue);color:#fff;padding:14px 40px;border-radius:999px;font-family:'TBold',sans-serif;font-size:34px;">โดยไม่ต้องอธิบายเหตุผล</div>
+  <div class="video-slot"><div class="video-label">★ คุณครู</div><div class="video-placeholder"><svg width="46" height="46" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"><rect x="2" y="6" width="14" height="12" rx="3"/><path d="M16 10l6-3v10l-6-3z"/></svg>พื้นที่วิดีโอผู้สอน</div></div>
+</section>
+
+<!-- SLIDE 13: Mission 3 -->
+<section data-label="Mission 3" data-screen-label="13" style="display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;padding:90px 120px;background:#FFFDF6;color:#243a4d;overflow:hidden;font-family:'TMedium','Noto Sans Thai',sans-serif;">
+  <div style="font-family:'TBold',sans-serif;font-size:34px;color:var(--coral);margin-bottom:10px;">MISSION #3</div>
+  <h2 style="font-family:'TBold','Noto Sans Thai',sans-serif;font-size:84px;line-height:1.1;margin:0 0 30px;">จด 3 สิ่งที่พวกเราไม่ชอบ</h2>
+  <div style="background:var(--coral);color:#fff;padding:14px 40px;border-radius:999px;font-family:'TBold',sans-serif;font-size:34px;">โดยไม่ต้องรู้สึกผิด</div>
+  <div class="video-slot"><div class="video-label">★ คุณครู</div><div class="video-placeholder"><svg width="46" height="46" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"><rect x="2" y="6" width="14" height="12" rx="3"/><path d="M16 10l6-3v10l-6-3z"/></svg>พื้นที่วิดีโอผู้สอน</div></div>
+</section>
+
+<!-- SLIDE 14: Secret -->
+<section data-label="ความลับ" data-screen-label="14" style="display:flex;flex-direction:column;justify-content:center;padding:90px 130px;background:var(--ink);color:#fff;overflow:hidden;font-family:'TMedium','Noto Sans Thai',sans-serif;">
+  <div style="font-family:'TBold',sans-serif;font-size:30px;color:var(--gold);margin-bottom:10px;">ความลับข้อหนึ่ง</div>
+  <h2 style="font-family:'TBold','Noto Sans Thai',sans-serif;font-size:72px;line-height:1.2;margin:0;">บางครั้ง... สิ่งที่เราไม่ชอบ<br>บอกตัวตนเราได้ชัด</h2>
+  <h2 style="font-family:'TBold','Noto Sans Thai',sans-serif;font-size:84px;line-height:1.1;margin:20px 0 0;color:var(--gold);">พอๆ กับสิ่งที่เราชอบ</h2>
+  <div class="video-slot"><div class="video-label">★ คุณครู</div><div class="video-placeholder"><svg width="46" height="46" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"><rect x="2" y="6" width="14" height="12" rx="3"/><path d="M16 10l6-3v10l-6-3z"/></svg>พื้นที่วิดีโอผู้สอน</div></div>
+</section>
+
+<!-- SLIDE 15: Brain Quest -->
+<section data-label="Brain Quest" data-screen-label="15" style="display:flex;flex-direction:column;justify-content:center;padding:90px 130px;background:radial-gradient(circle at 1px 1px, rgba(36,58,77,.05) 1.6px, transparent 1.7px) 0 0/42px 42px, #FFF6E6;color:#243a4d;overflow:hidden;font-family:'TMedium','Noto Sans Thai',sans-serif;">
+  <div style="font-family:'TBold',sans-serif;font-size:30px;color:var(--purple);margin-bottom:10px;">BRAIN QUEST</div>
+  <h2 style="font-family:'TBold','Noto Sans Thai',sans-serif;font-size:72px;line-height:1.2;margin:0 0 30px;">ลองสังเกตดู... ระหว่าง "ชอบ" กับ "ไม่ชอบ"</h2>
+  <div style="background:var(--purple);color:#fff;padding:30px 40px;border-radius:24px;font-size:52px;font-family:'TBold',sans-serif;display:inline-block;max-width:1000px;">มี Pattern อะไรซ่อนอยู่ไหม? 🔍</div>
+  <div class="video-slot"><div class="video-label">★ คุณครู</div><div class="video-placeholder"><svg width="46" height="46" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"><rect x="2" y="6" width="14" height="12" rx="3"/><path d="M16 10l6-3v10l-6-3z"/></svg>พื้นที่วิดีโอผู้สอน</div></div>
+</section>
+
+<!-- SLIDE 16: Discovery Map -->
+<section data-label="Discovery Map" data-screen-label="16" style="display:flex;flex-direction:column;justify-content:center;padding:90px 130px;background:var(--teal);color:#fff;overflow:hidden;font-family:'TMedium','Noto Sans Thai',sans-serif;">
+  <h2 style="font-family:'TBold','Noto Sans Thai',sans-serif;font-size:72px;margin:0 0 30px;">เริ่มต่อแผนที่ SELF DISCOVERY MAP</h2>
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;max-width:1000px;">
+    <div style="background:rgba(255,255,255,.2);padding:18px 28px;border-radius:14px;font-size:34px;">✅ ชอบ → เก็บไว้</div>
+    <div style="background:rgba(255,255,255,.2);padding:18px 28px;border-radius:14px;font-size:34px;">✅ ไม่ชอบ → เก็บไว้</div>
+    <div style="background:rgba(255,255,255,.2);padding:18px 28px;border-radius:14px;font-size:34px;">✅ อยากลอง → เก็บไว้</div>
+    <div style="background:rgba(255,255,255,.2);padding:18px 28px;border-radius:14px;font-size:34px;">✅ กลัว → เก็บไว้</div>
+    <div style="background:rgba(255,255,255,.2);padding:18px 28px;border-radius:14px;font-size:34px;grid-column: span 2;">✅ ยังไม่รู้ → เก็บไว้</div>
+  </div>
+  <div class="video-slot"><div class="video-label">★ คุณครู</div><div class="video-placeholder"><svg width="46" height="46" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"><rect x="2" y="6" width="14" height="12" rx="3"/><path d="M16 10l6-3v10l-6-3z"/></svg>พื้นที่วิดีโอผู้สอน</div></div>
+</section>
+
+<!-- SLIDE 17: Don't hurry -->
+<section data-label="อย่ารีบสรุป" data-screen-label="17" style="display:flex;flex-direction:column;justify-content:center;padding:90px 130px;background:radial-gradient(circle at 1px 1px, rgba(36,58,77,.05) 1.6px, transparent 1.7px) 0 0/42px 42px, #FFF6E6;color:#243a4d;overflow:hidden;font-family:'TMedium','Noto Sans Thai',sans-serif;">
+  <h2 style="font-family:'TBold','Noto Sans Thai',sans-serif;font-size:84px;line-height:1.1;margin:0 0 30px;">อย่ารีบสรุปตัวเอง</h2>
+  <div style="background:var(--orange);color:#fff;padding:30px 40px;border-radius:24px;font-size:52px;font-family:'TBold',sans-serif;">เพราะแผนที่ยังไม่เสร็จ...<br>นี่เป็นแค่จิ๊กซอชิ้นแรก 🧩</div>
+  <div class="video-slot"><div class="video-label">★ คุณครู</div><div class="video-placeholder"><svg width="46" height="46" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"><rect x="2" y="6" width="14" height="12" rx="3"/><path d="M16 10l6-3v10l-6-3z"/></svg>พื้นที่วิดีโอผู้สอน</div></div>
+</section>
+
+<!-- SLIDE 18: Achievement -->
+<section data-label="Achievement" data-screen-label="18" style="display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;padding:90px 120px;background:linear-gradient(135deg,#46C28A,#15A89B);color:#fff;overflow:hidden;font-family:'TMedium','Noto Sans Thai',sans-serif;">
+  <div style="font-size:120px;margin-bottom:20px;">🏆</div>
+  <div style="font-family:'TBold',sans-serif;font-size:40px;letter-spacing:4px;margin-bottom:10px;">ACHIEVEMENT UNLOCKED</div>
+  <h2 style="font-family:'TBold','Noto Sans Thai',sans-serif;font-size:96px;line-height:1.1;margin:0;">Explorer Lv.1</h2>
+  <div style="background:#fff;color:var(--teal);padding:14px 40px;border-radius:999px;font-family:'TBold',sans-serif;font-size:48px;margin-top:20px;">นักสำรวจตัวตน</div>
+  <div class="video-slot"><div class="video-label">★ คุณครู</div><div class="video-placeholder"><svg width="46" height="46" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"><rect x="2" y="6" width="14" height="12" rx="3"/><path d="M16 10l6-3v10l-6-3z"/></svg>พื้นที่วิดีโอผู้สอน</div></div>
+</section>
+
+<!-- SLIDE 19: Key Fragment -->
+<section data-label="Key Fragment" data-screen-label="19" style="display:flex;flex-direction:column;justify-content:center;padding:90px 130px;background:#243a4d;color:#fff;overflow:hidden;font-family:'TMedium','Noto Sans Thai',sans-serif;">
+  <div style="font-family:'TBold',sans-serif;font-size:30px;color:var(--gold);margin-bottom:10px;">🔑 KEY FRAGMENT #1</div>
+  <h2 style="font-family:'TBold','Noto Sans Thai',sans-serif;font-size:84px;line-height:1.1;margin:0;">พวกเราไม่จำเป็น<br>ต้องมีคำตอบ</h2>
+  <h2 style="font-family:'TBold','Noto Sans Thai',sans-serif;font-size:96px;line-height:1.1;margin:20px 0 0;color:var(--gold);">แต่ต้องเริ่มสังเกต</h2>
+  <div class="video-slot"><div class="video-label">★ คุณครู</div><div class="video-placeholder"><svg width="46" height="46" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"><rect x="2" y="6" width="14" height="12" rx="3"/><path d="M16 10l6-3v10l-6-3z"/></svg>พื้นที่วิดีโอผู้สอน</div></div>
+</section>
+
+<!-- SLIDE 20: Ending -->
+<section data-label="Ending" data-screen-label="20" style="display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;padding:90px 120px;background:linear-gradient(165deg,#5BC8EE 0%,#3FA0E4 52%,#7E83EF 100%);color:#fff;overflow:hidden;font-family:'TMedium','Noto Sans Thai',sans-serif;">
+  <div style="font-family:'TBold','Noto Sans Thai',sans-serif;font-size:25px;letter-spacing:7px;color:rgba(255,255,255,.9);background:rgba(255,255,255,.16);padding:12px 28px;border-radius:999px;border:1.5px solid rgba(255,255,255,.4);">ENDING SCENE</div>
+  <h2 style="font-family:'TBold','Noto Sans Thai',sans-serif;font-size:72px;line-height:1.2;margin:34px 0 0;">กุญแจดอกสำคัญยังไม่ปรากฏ...</h2>
+  <div style="font-size:48px;margin-top:20px;opacity:.9;">แต่พวกเราเริ่มเห็นร่องรอยของมันแล้ว</div>
+  <div style="display:flex;align-items:center;gap:14px;margin-top:60px;font-family:'TMedium','Noto Sans Thai',sans-serif;font-size:40px;color:#243a4d;background:var(--gold);padding:14px 40px;border-radius:999px;">
+    🎒 NEXT ITEM: Strength Radar
+  </div>
+  <div class="video-slot"><div class="video-label">★ คุณครู</div><div class="video-placeholder"><svg width="46" height="46" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"><rect x="2" y="6" width="14" height="12" rx="3"/><path d="M16 10l6-3v10l-6-3z"/></svg>พื้นที่วิดีโอผู้สอน</div></div>
+</section>
+
+</x-import>
+</x-dc>
+</body>
+</html>

@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+  @font-face{font-family:'TBold';src:url('./TBold.ttf') format('truetype');font-weight:400 900;font-display:swap;}
+  @font-face{font-family:'TMedium';src:url('./TMedium.ttf') format('truetype');font-weight:400 700;font-display:swap;}
+  :root{
+    --ink:#243a4d; --ink-soft:#5d7283; --line:#e7dcc4;
+    --cream:#FFF6E6; --paper:#FFFCF4;
+    --gold:#FFC53D; --coral:#FF6F61; --teal:#15A89B; --green:#46C28A; --purple:#8A6BE6; --orange:#FF9838; --blue:#2FA3DE;
+    --t-hero:128px; --t-title:74px; --t-lead:54px; --t-sub:44px; --t-body:36px; --t-small:28px; --t-eye:25px;
+  }
+  *{box-sizing:border-box;}
+  body{margin:0;background:#0e1b24;}
+  @keyframes floaty{0%,100%{transform:translateY(0)}50%{transform:translateY(-18px)}}
+  
+  .video-slot {
+    position:absolute;right:46px;bottom:42px;width:440px;height:258px;border-radius:24px;
+    background:linear-gradient(160deg,#33536a,#1e3442);border:5px solid #ffffff;
+    box-shadow:0 16px 38px rgba(20,40,55,.30),0 0 0 3px rgba(255,197,61,.5);
+    overflow:hidden;display:flex;align-items:center;justify-content:center;z-index:10;
+  }
+  .video-label {
+    position:absolute;top:13px;left:13px;display:flex;align-items:center;gap:7px;
+    background:#FFC53D;color:#243a4d;font-family:'TBold','Noto Sans Thai',sans-serif;
+    font-size:21px;line-height:1;padding:7px 15px 8px;border-radius:999px;
+  }
+  .video-placeholder {
+    display:flex;flex-direction:column;align-items:center;gap:10px;color:rgba(255,255,255,.5);
+    font-family:'TMedium','Noto Sans Thai',sans-serif;font-size:22px;
+  }
+</style>
+</helmet>
+
+<x-import component-from-global-scope="deck-stage" from="./deck-stage.js" width="1920" height="1080" hint-size="100%,100%">
+
+<!-- SLIDE 1: Title -->
+<section data-label="Title" data-screen-label="01" style="display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;padding:90px 120px;background:linear-gradient(165deg,#46C28A 0%,#15A89B 52%,#127f8e 100%);color:#fff;overflow:hidden;font-family:'TMedium','Noto Sans Thai',sans-serif;">
+  <div style="font-family:'TBold','Noto Sans Thai',sans-serif;font-size:25px;letter-spacing:7px;color:rgba(255,255,255,.9);background:rgba(255,255,255,.16);padding:12px 28px;border-radius:999px;border:1.5px solid rgba(255,255,255,.4);">CHAPTER 3 : COMMUNICATION COMPASS</div>
+  <h1 style="font-family:'TBold','Noto Sans Thai',sans-serif;font-size:110px;line-height:1;margin:34px 0 0;letter-spacing:2px;text-shadow:0 10px 30px rgba(20,50,80,.28);">COMMUNICATION SKILL</h1>
+  <div style="font-family:'TBold','Noto Sans Thai',sans-serif;font-size:58px;margin-top:14px;color:#FFD256;">The Compass of Allies</div>
+  <div style="display:flex;align-items:center;gap:14px;margin-top:40px;font-family:'TMedium','Noto Sans Thai',sans-serif;font-size:40px;color:#fff;background:rgba(36,58,77,.22);padding:14px 34px;border-radius:999px;">
+    🧭 ภารกิจสร้างมิตรภาพผ่านการสื่อสาร
+  </div>
+  <div class="video-slot"><div class="video-label">★ คุณครู</div><div class="video-placeholder"><svg width="46" height="46" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"><rect x="2" y="6" width="14" height="12" rx="3"/><path d="M16 10l6-3v10l-6-3z"/></svg>พื้นที่วิดีโอผู้สอน</div></div>
+</section>
+
+<!-- SLIDE 2: Why it matters -->
+<section data-label="ทำไมต้องสื่อสาร" data-screen-label="02" style="display:flex;flex-direction:column;justify-content:center;padding:90px 130px;background:radial-gradient(circle at 1px 1px, rgba(36,58,77,.05) 1.6px, transparent 1.7px) 0 0/42px 42px, #F6FFF9;color:#243a4d;overflow:hidden;font-family:'TMedium','Noto Sans Thai',sans-serif;">
+  <h2 style="font-family:'TBold','Noto Sans Thai',sans-serif;font-size:72px;line-height:1.1;margin:0 0 40px;">ทำไม "การสื่อสาร"<br>ถึงเป็นเข็มทิศสำคัญ?</h2>
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:20px;max-width:1100px;">
+    <div style="background:#fff;border:3px solid #cdeede;border-radius:24px;padding:30px;display:flex;align-items:center;gap:20px;">
+      <div style="font-size:50px;">🤝</div>
+      <div style="font-size:36px;font-family:'TBold',sans-serif;">สร้างความเข้าใจที่ตรงกัน</div>
+    </div>
+    <div style="background:#fff;border:3px solid #cdeede;border-radius:24px;padding:30px;display:flex;align-items:center;gap:20px;">
+      <div style="font-size:50px;">❤️</div>
+      <div style="font-size:36px;font-family:'TBold',sans-serif;">ลดความขัดแย้ง</div>
+    </div>
+    <div style="background:#fff;border:3px solid #cdeede;border-radius:24px;padding:30px;display:flex;align-items:center;gap:20px;">
+      <div style="font-size:50px;">🚀</div>
+      <div style="font-size:36px;font-family:'TBold',sans-serif;">ทำงานร่วมกับคนอื่นได้ดีขึ้น</div>
+    </div>
+    <div style="background:#fff;border:3px solid #cdeede;border-radius:24px;padding:30px;display:flex;align-items:center;gap:20px;">
+      <div style="font-size:50px;">✨</div>
+      <div style="font-size:36px;font-family:'TBold',sans-serif;">แสดงตัวตนอย่างสร้างสรรค์</div>
+    </div>
+  </div>
+  <div class="video-slot"><div class="video-label">★ คุณครู</div><div class="video-placeholder"><svg width="46" height="46" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"><rect x="2" y="6" width="14" height="12" rx="3"/><path d="M16 10l6-3v10l-6-3z"/></svg>พื้นที่วิดีโอผู้สอน</div></div>
+</section>
+
+<!-- SLIDE 3: The 3Cs -->
+<section data-label="3Cs" data-screen-label="03" style="display:flex;flex-direction:column;justify-content:center;padding:90px 130px;background:#15A89B;color:#fff;overflow:hidden;font-family:'TMedium','Noto Sans Thai',sans-serif;">
+  <h2 style="font-family:'TBold','Noto Sans Thai',sans-serif;font-size:72px;margin:0 0 40px;">กฎ 3 ข้อของการสื่อสารที่ดี</h2>
+  <div style="display:flex;gap:30px;">
+    <div style="flex:1;background:rgba(255,255,255,.15);border-radius:24px;padding:34px;text-align:center;border:2px solid rgba(255,255,255,.3);">
+      <div style="font-family:'TBold',sans-serif;font-size:54px;color:var(--gold);">CLEAR</div>
+      <div style="font-size:32px;margin-top:10px;">พูดให้ชัดเจน เข้าใจง่าย</div>
+    </div>
+    <div style="flex:1;background:rgba(255,255,255,.15);border-radius:24px;padding:34px;text-align:center;border:2px solid rgba(255,255,255,.3);">
+      <div style="font-family:'TBold',sans-serif;font-size:54px;color:var(--gold);">CONCISE</div>
+      <div style="font-size:32px;margin-top:10px;">พูดให้ตรงประเด็น ไม่เยิ่นเย้อ</div>
+    </div>
+    <div style="flex:1;background:rgba(255,255,255,.15);border-radius:24px;padding:34px;text-align:center;border:2px solid rgba(255,255,255,.3);">
+      <div style="font-family:'TBold',sans-serif;font-size:54px;color:var(--gold);">COURTEOUS</div>
+      <div style="font-size:32px;margin-top:10px;">พูดอย่างสุภาพ ให้เกียรติกัน</div>
+    </div>
+  </div>
+  <div class="video-slot"><div class="video-label">★ คุณครู</div><div class="video-placeholder"><svg width="46" height="46" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"><rect x="2" y="6" width="14" height="12" rx="3"/><path d="M16 10l6-3v10l-6-3z"/></svg>พื้นที่วิดีโอผู้สอน</div></div>
+</section>
+
+<!-- SLIDE 4: Mission 1 -->
+<section data-label="Mission 1" data-screen-label="04" style="display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;padding:90px 120px;background:#FFFDF6;color:#243a4d;overflow:hidden;font-family:'TMedium','Noto Sans Thai',sans-serif;">
+  <div style="font-family:'TBold',sans-serif;font-size:34px;color:var(--green);margin-bottom:10px;">MISSION #1</div>
+  <h2 style="font-family:'TBold','Noto Sans Thai',sans-serif;font-size:84px;line-height:1.1;margin:0 0 30px;">Active Listening 👂</h2>
+  <p style="font-size:44px;max-width:1000px;margin-bottom:40px;">ลองฟังเพื่อนพูด 1 นาที โดยไม่ขัดจังหวะ และลองสรุปใจความสำคัญที่ได้ยิน</p>
+  <div style="background:var(--gold);padding:14px 40px;border-radius:999px;font-family:'TBold',sans-serif;font-size:34px;">ทักษะการฟัง สำคัญพอๆ กับการพูด</div>
+  <div class="video-slot"><div class="video-label">★ คุณครู</div><div class="video-placeholder"><svg width="46" height="46" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"><rect x="2" y="6" width="14" height="12" rx="3"/><path d="M16 10l6-3v10l-6-3z"/></svg>พื้นที่วิดีโอผู้สอน</div></div>
+</section>
+
+<!-- SLIDE 5: Secret -->
+<section data-label="ความลับ" data-screen-label="05" style="display:flex;flex-direction:column;justify-content:center;padding:90px 130px;background:var(--ink);color:#fff;overflow:hidden;font-family:'TMedium','Noto Sans Thai',sans-serif;">
+  <div style="font-family:'TBold',sans-serif;font-size:30px;color:var(--gold);margin-bottom:10px;">หัวใจสำคัญของการสื่อสาร</div>
+  <h2 style="font-family:'TBold','Noto Sans Thai',sans-serif;font-size:72px;line-height:1.2;margin:0;">ไม่ใช่แค่ว่าเรา "พูด" อะไร...</h2>
+  <h2 style="font-family:'TBold','Noto Sans Thai',sans-serif;font-size:84px;line-height:1.1;margin:20px 0 0;color:var(--green);">แต่คือการที่คนฟัง "รู้สึก" อย่างไร</h2>
+  <p style="font-size:40px;margin-top:40px;opacity:.8;">Empathy คืออาวุธลับของนักสื่อสารที่ดี</p>
+  <div class="video-slot"><div class="video-label">★ คุณครู</div><div class="video-placeholder"><svg width="46" height="46" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"><rect x="2" y="6" width="14" height="12" rx="3"/><path d="M16 10l6-3v10l-6-3z"/></svg>พื้นที่วิดีโอผู้สอน</div></div>
+</section>
+
+<!-- SLIDE 6: Achievement -->
+<section data-label="Achievement" data-screen-label="06" style="display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;padding:90px 120px;background:linear-gradient(135deg,#46C28A,#FFC53D);color:#fff;overflow:hidden;font-family:'TMedium','Noto Sans Thai',sans-serif;">
+  <div style="font-size:120px;margin-bottom:20px;">🧭</div>
+  <div style="font-family:'TBold',sans-serif;font-size:40px;letter-spacing:4px;margin-bottom:10px;">ACHIEVEMENT UNLOCKED</div>
+  <h2 style="font-family:'TBold','Noto Sans Thai',sans-serif;font-size:96px;line-height:1.1;margin:0;">Skillful Communicator</h2>
+  <div style="background:#fff;color:var(--green);padding:14px 40px;border-radius:999px;font-family:'TBold',sans-serif;font-size:48px;margin-top:20px;">นักสื่อสารสร้างสรรค์</div>
+  <div class="video-slot"><div class="video-label">★ คุณครู</div><div class="video-placeholder"><svg width="46" height="46" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"><rect x="2" y="6" width="14" height="12" rx="3"/><path d="M16 10l6-3v10l-6-3z"/></svg>พื้นที่วิดีโอผู้สอน</div></div>
+</section>
+
+<!-- SLIDE 7: Closing -->
+<section data-label="บทสรุป" data-screen-label="07" style="display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;padding:90px 120px;background:linear-gradient(165deg,#46C28A 0%,#15A89B 52%,#127f8e 100%);color:#fff;overflow:hidden;font-family:'TMedium','Noto Sans Thai',sans-serif;">
+  <h2 style="font-family:'TBold','Noto Sans Thai',sans-serif;font-size:72px;line-height:1.2;margin:0;">วันนี้เข็มทิศของพวกเราเริ่มขยับแล้ว</h2>
+  <p style="font-size:48px;margin-top:20px;opacity:.9;">การสื่อสารที่ดี เริ่มต้นจากการฟังที่แท้จริง</p>
+  <div style="display:flex;align-items:center;gap:14px;margin-top:60px;font-family:'TMedium','Noto Sans Thai',sans-serif;font-size:40px;color:#243a4d;background:var(--gold);padding:14px 40px;border-radius:999px;">
+    🎒 NEXT CHAPTER: Emotion Toolkit
+  </div>
+  <div class="video-slot"><div class="video-label">★ คุณครู</div><div class="video-placeholder"><svg width="46" height="46" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"><rect x="2" y="6" width="14" height="12" rx="3"/><path d="M16 10l6-3v10l-6-3z"/></svg>พื้นที่วิดีโอผู้สอน</div></div>
+</section>
+
+</x-import>
+</x-dc>
+</body>
+</html>
